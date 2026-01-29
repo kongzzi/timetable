@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffeef8 0%, #e3f2fd 50%, #f0f4ff 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #555;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(200, 180, 220, 0.2);
+}
+
+/* 헤더 */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #d8a5d8;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(216, 165, 216, 0.1);
+}
+
+header p {
+    color: #9999bb;
+    font-size: 1.1em;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* 입력 폼 섹션 */
+.form-section {
+    background: linear-gradient(135deg, #fff5f9 0%, #f5f9ff 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #f0e5f5;
+}
+
+.form-section h2 {
+    color: #d8a5d8;
+    margin-bottom: 25px;
+    font-size: 1.4em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b8a5c8;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+input[type="text"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e8d5f0;
+    border-radius: 10px;
+    background: white;
+    color: #555;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="time"]:focus,
+select:focus {
+    outline: none;
+    border-color: #d8a5d8;
+    background: #fff9fc;
+    box-shadow: 0 0 0 3px rgba(216, 165, 216, 0.1);
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+/* 버튼 */
+.btn-add {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #f0a8f0 0%, #d8a5d8 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(216, 165, 216, 0.3);
+}
+
+.btn-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(216, 165, 216, 0.4);
+}
+
+.btn-add:active {
+    transform: translateY(0);
+}
+
+/* 시간표 섹션 */
+.timetable-section {
+    background: linear-gradient(135deg, #f5f9ff 0%, #f9f5ff 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #e5f0f5;
+}
+
+.timetable-section h2 {
+    color: #8ba5d8;
+    margin-bottom: 25px;
+    font-size: 1.4em;
+}
+
+.timetable-wrapper {
+    overflow-x: auto;
+}
+
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.timetable thead {
+    background: linear-gradient(135deg, #c8d5f0 0%, #e8d5f0 100%);
+}
+
+.timetable th {
+    padding: 15px;
+    text-align: center;
+    color: #555;
+    font-weight: 600;
+    border-bottom: 3px solid #d8c5e5;
+}
+
+.time-header {
+    background: linear-gradient(135deg, #e3d5f0 0%, #d8c5e5 100%);
+    color: #666;
+    font-weight: 700;
+}
+
+.timetable td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #f0e5f5;
+    height: 50px;
+    vertical-align: middle;
+    font-size: 0.9em;
+}
+
+.timetable tbody tr:nth-child(odd) {
+    background: #fafbff;
+}
+
+.timetable tbody tr:nth-child(even) {
+    background: #f5f9ff;
+}
+
+.lecture-cell {
+    background: linear-gradient(135deg, #f0a8f0 0%, #d8a5d8 100%);
+    color: white;
+    border-radius: 8px;
+    padding: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85em;
+}
+
+.lecture-cell:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(216, 165, 216, 0.4);
+}
+
+/* 강의 목록 섹션 */
+.lecture-list-section {
+    background: linear-gradient(135deg, #fff5f9 0%, #f5f9ff 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #f0e5f5;
+}
+
+.lecture-list-section h2 {
+    color: #d8a5d8;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+.lecture-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.lecture-card {
+    background: white;
+    border: 2px solid #e8d5f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(216, 165, 216, 0.1);
+    transition: all 0.3s ease;
+}
+
+.lecture-card:hover {
+    border-color: #d8a5d8;
+    box-shadow: 0 6px 20px rgba(216, 165, 216, 0.2);
+    transform: translateY(-2px);
+}
+
+.lecture-card-title {
+    font-weight: 700;
+    color: #d8a5d8;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.lecture-card-info {
+    color: #999;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.lecture-card-info strong {
+    color: #666;
+}
+
+.btn-delete {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #ffb3ba 0%, #ff9999 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-delete:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 150, 150, 0.3);
+}
+
+.empty-message {
+    text-align: center;
+    color: #bbb;
+    padding: 30px;
+    font-style: italic;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .lecture-list {
+        grid-template-columns: 1fr;
+    }
+
+    .timetable {
+        font-size: 0.85em;
+    }
+
+    .timetable th,
+    .timetable td {
+        padding: 10px 5px;
+    }
+}

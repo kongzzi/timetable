@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026년 Kongzzi의 1학기 시간표</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 2026년 Kongzzi의 1학기 시간표</h1>
+            <p>새로운 강의를 추가해서 시간표를 만들어보세요!</p>
+        </header>
+
+        <div class="main-content">
+            <!-- 입력 폼 -->
+            <div class="form-section">
+                <h2>강의 추가하기</h2>
+                <form id="lectureForm">
+                    <div class="form-group">
+                        <label for="lectureName">강의명</label>
+                        <input type="text" id="lectureName" placeholder="예: 자료구조" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="classroom">강의실</label>
+                        <input type="text" id="classroom" placeholder="예: 학관 301호" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="day">요일</label>
+                        <select id="day" required>
+                            <option value="">선택하세요</option>
+                            <option value="월">월요일</option>
+                            <option value="화">화요일</option>
+                            <option value="수">수요일</option>
+                            <option value="목">목요일</option>
+                            <option value="금">금요일</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="startTime">시작 시간</label>
+                            <input type="time" id="startTime" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="endTime">종료 시간</label>
+                            <input type="time" id="endTime" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-add">✨ 강의 추가</button>
+                </form>
+            </div>
+
+            <!-- 시간표 -->
+            <div class="timetable-section">
+                <h2>시간표</h2>
+                <div class="timetable-wrapper">
+                    <table class="timetable">
+                        <thead>
+                            <tr>
+                                <th class="time-header">시간</th>
+                                <th>월</th>
+                                <th>화</th>
+                                <th>수</th>
+                                <th>목</th>
+                                <th>금</th>
+                            </tr>
+                        </thead>
+                        <tbody id="timetableBody">
+                            <!-- JavaScript로 생성됨 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 강의 목록 -->
+        <div class="lecture-list-section">
+            <h2>추가된 강의</h2>
+            <div id="lectureList" class="lecture-list">
+                <p class="empty-message">아직 추가된 강의가 없어요! 위의 폼에서 강의를 추가해보세요.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
